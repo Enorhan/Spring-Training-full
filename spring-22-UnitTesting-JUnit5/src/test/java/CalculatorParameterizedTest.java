@@ -12,13 +12,13 @@ public class CalculatorParameterizedTest {
 
     @ParameterizedTest
     @ValueSource(ints = {3, 6, 9})
-    void testCase2(int num) {
+    void testCase1(int num) {
         Assertions.assertEquals(0, num % 3);
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"Java", "JS", "TS"})
-//    @EmptySource
+//    @EmptySource            // ""
 //    @NullSource
     @NullAndEmptySource
     void testCase3(String arg) {
@@ -28,7 +28,7 @@ public class CalculatorParameterizedTest {
     @ParameterizedTest
     @MethodSource("stringProvider")
     void testCase4(String arg) {
-        Assertions.assertNotNull(arg);
+        Assertions.assertFalse(arg.isEmpty());
     }
 
     static String[] stringProvider() {
@@ -42,19 +42,13 @@ public class CalculatorParameterizedTest {
             "30, 20, 100"
     })
     void testCase5(int num1, int num2, int result) {
-        Assertions.assertEquals(result,Calculator.add(num1, num2));
+        Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1)
     void testCase6(int num1, int num2, int result) {
-        Assertions.assertEquals(result,Calculator.add(num1, num2));
-    }
-
-    @ParameterizedTest
-    @CsvFileSource(files = "src/test/resources/sample-data.csv", numLinesToSkip = 1)
-    void testCase7(int num1, int num2, int result) {
-        Assertions.assertEquals(result,Calculator.add(num1, num2));
+        Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
 
 }
