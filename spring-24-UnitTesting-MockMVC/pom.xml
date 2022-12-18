@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>com.cydeo</groupId>
-    <artifactId>spring-24-IntegrationTesting-MockMVC</artifactId>
+    <artifactId>spring-24-UnitTesting-MockMVC</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-24-IntegrationTesting-MockMVC</name>
-    <description>spring-24-IntegrationTesting-MockMVC</description>
+    <name>spring-24-UnitTesting-MockMVC</name>
+    <description>spring-24-UnitTesting-MockMVC</description>
 
     <properties>
         <java.version>11</java.version>
