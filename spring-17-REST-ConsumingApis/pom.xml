@@ -14,7 +14,7 @@
     <name>spring-17-REST-ConsumingApis</name>
     <description>spring-17-REST-ConsumingApis</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
