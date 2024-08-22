@@ -14,7 +14,7 @@
     <name>spring-20-REST-Security-Keycloak-OrganizationsApp</name>
     <description>spring-20-REST-Security-Keycloak-OrganizationsApp</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
